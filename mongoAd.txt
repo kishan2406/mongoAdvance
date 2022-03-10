@@ -1,0 +1,1516 @@
+MongoDB shell version v5.0.6
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("82c37ae3-81a2-4aac-ab3e-5537e939fe7c") }
+MongoDB server version: 5.0.6
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting:
+        2022-03-10T13:21:18.118+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+>
+> show dbs
+Movie        0.000GB
+admin        0.000GB
+config       0.000GB
+kishan_data  0.000GB
+local        0.000GB
+masai15      0.000GB
+> use kishan_data
+switched to db kishan_data
+>
+> db.collections
+kishan_data.collections
+>
+> show collections
+movie
+>
+> db.movie.find({}).pretty()
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa040"),
+        "movie_name" : "Drama|Thriller",
+        "movie_genre" : "Tadeo",
+        "production_year" : 1996,
+        "budget" : 12624
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa041"),
+        "movie_name" : "Horror",
+        "movie_genre" : "Jonah",
+        "production_year" : 1997,
+        "budget" : 13366
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa042"),
+        "movie_name" : "Crime|Film-Noir",
+        "movie_genre" : "Ranice",
+        "production_year" : 2005,
+        "budget" : 16235
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa043"),
+        "movie_name" : "Action|Crime|Drama|Thriller",
+        "movie_genre" : "Linnie",
+        "production_year" : 1996,
+        "budget" : 12346
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa044"),
+        "movie_name" : "Comedy",
+        "movie_genre" : "Winny",
+        "production_year" : 2002,
+        "budget" : 10344
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa045"),
+        "movie_name" : "Drama",
+        "movie_genre" : "Nevile",
+        "production_year" : 2004,
+        "budget" : 19745
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa046"),
+        "movie_name" : "Thriller",
+        "movie_genre" : "Irvin",
+        "production_year" : 2006,
+        "budget" : 19219
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa047"),
+        "movie_name" : "Drama|Horror|Mystery|Romance|Thriller",
+        "movie_genre" : "Dorella",
+        "production_year" : 2002,
+        "budget" : 17040
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa048"),
+        "movie_name" : "Comedy",
+        "movie_genre" : "Rosabella",
+        "production_year" : 1991,
+        "budget" : 17001
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa049"),
+        "movie_name" : "Comedy|Romance",
+        "movie_genre" : "Eadith",
+        "production_year" : 2006,
+        "budget" : 11215
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa04a"),
+        "movie_name" : "Crime|Drama|Thriller",
+        "movie_genre" : "Marc",
+        "production_year" : 2020,
+        "budget" : 19368
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa04b"),
+        "movie_name" : "Action|Adventure|Children|Fantasy|Mystery|Thriller",
+        "movie_genre" : "Shaun",
+        "production_year" : 2011,
+        "budget" : 10161
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa04c"),
+        "movie_name" : "Documentary",
+        "movie_genre" : "Constantia",
+        "production_year" : 2012,
+        "budget" : 17068
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa04d"),
+        "movie_name" : "War",
+        "movie_genre" : "Townsend",
+        "production_year" : 2009,
+        "budget" : 10694
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa04e"),
+        "movie_name" : "Comedy|Sci-Fi",
+        "movie_genre" : "Worth",
+        "production_year" : 2014,
+        "budget" : 9564
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa04f"),
+        "movie_name" : "Documentary",
+        "movie_genre" : "Rheta",
+        "production_year" : 2007,
+        "budget" : 16141
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa050"),
+        "movie_name" : "Comedy|Sci-Fi",
+        "movie_genre" : "Otho",
+        "production_year" : 2009,
+        "budget" : 16304
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa051"),
+        "movie_name" : "Documentary|War",
+        "movie_genre" : "Genni",
+        "production_year" : 2019,
+        "budget" : 17360
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa052"),
+        "movie_name" : "Horror|Sci-Fi",
+        "movie_genre" : "Kelcey",
+        "production_year" : 2001,
+        "budget" : 9124
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa053"),
+        "movie_name" : "Drama|Thriller",
+        "movie_genre" : "Blane",
+        "production_year" : 2016,
+        "budget" : 12607
+}
+Type "it" for more
+>
+>
+> db.movie.find({ " movie_name ": " Blane ": {$eq: " Blane "  }).pretty()
+...
+... ^C
+
+> db.movie.find({ " movie_name ": " Blane ": {$eq: " Blane " } }).pretty()
+uncaught exception: SyntaxError: missing } after property list :
+@(shell):1:41
+>
+>
+> db.movie.find({"movie_name":"Blane": {$eq: "Blane"}}).pretty()
+uncaught exception: SyntaxError: missing } after property list :
+@(shell):1:35
+>
+> db.movie.find({"movie_name": {$eq:"Blane"}}).pretty()
+>
+> db.movie.find({"movie_name":{$eq:"Blane"}}).pretty()
+>
+> db.movie.find({"movie_name":{$eq:"Drama"}}).pretty()
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa045"),
+        "movie_name" : "Drama",
+        "movie_genre" : "Nevile",
+        "production_year" : 2004,
+        "budget" : 19745
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa057"),
+        "movie_name" : "Drama",
+        "movie_genre" : "Kin",
+        "production_year" : 1996,
+        "budget" : 13675
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa058"),
+        "movie_name" : "Drama",
+        "movie_genre" : "Ruth",
+        "production_year" : 1997,
+        "budget" : 17957
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa05c"),
+        "movie_name" : "Drama",
+        "movie_genre" : "Corrinne",
+        "production_year" : 1991,
+        "budget" : 15374
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa062"),
+        "movie_name" : "Drama",
+        "movie_genre" : "Eustace",
+        "production_year" : 2010,
+        "budget" : 18627
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa063"),
+        "movie_name" : "Drama",
+        "movie_genre" : "Maximilianus",
+        "production_year" : 1990,
+        "budget" : 15544
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa066"),
+        "movie_name" : "Drama",
+        "movie_genre" : "Hildy",
+        "production_year" : 2008,
+        "budget" : 11101
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa069"),
+        "movie_name" : "Drama",
+        "movie_genre" : "Sophie",
+        "production_year" : 2011,
+        "budget" : 9045
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa06a"),
+        "movie_name" : "Drama",
+        "movie_genre" : "Pru",
+        "production_year" : 2011,
+        "budget" : 14102
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa071"),
+        "movie_name" : "Drama",
+        "movie_genre" : "Byron",
+        "production_year" : 1995,
+        "budget" : 14985
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa075"),
+        "movie_name" : "Drama",
+        "movie_genre" : "Alaric",
+        "production_year" : 2002,
+        "budget" : 16228
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa079"),
+        "movie_name" : "Drama",
+        "movie_genre" : "Riannon",
+        "production_year" : 2003,
+        "budget" : 14620
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa085"),
+        "movie_name" : "Drama",
+        "movie_genre" : "Kandace",
+        "production_year" : 2004,
+        "budget" : 13080
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa086"),
+        "movie_name" : "Drama",
+        "movie_genre" : "Brinn",
+        "production_year" : 2013,
+        "budget" : 9135
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa087"),
+        "movie_name" : "Drama",
+        "movie_genre" : "Evaleen",
+        "production_year" : 1996,
+        "budget" : 19029
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa08e"),
+        "movie_name" : "Drama",
+        "movie_genre" : "Britt",
+        "production_year" : 2014,
+        "budget" : 16278
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa091"),
+        "movie_name" : "Drama",
+        "movie_genre" : "Rabi",
+        "production_year" : 2011,
+        "budget" : 14100
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa09b"),
+        "movie_name" : "Drama",
+        "movie_genre" : "Rhianon",
+        "production_year" : 1995,
+        "budget" : 17116
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa0a0"),
+        "movie_name" : "Drama",
+        "movie_genre" : "Benjamen",
+        "production_year" : 1995,
+        "budget" : 18162
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa0a4"),
+        "movie_name" : "Drama",
+        "movie_genre" : "Petronia",
+        "production_year" : 1995,
+        "budget" : 12438
+}
+Type "it" for more
+>
+>
+> db.movie.find({"movie_name":{$ne:"Drama"}}).pretty()
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa040"),
+        "movie_name" : "Drama|Thriller",
+        "movie_genre" : "Tadeo",
+        "production_year" : 1996,
+        "budget" : 12624
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa041"),
+        "movie_name" : "Horror",
+        "movie_genre" : "Jonah",
+        "production_year" : 1997,
+        "budget" : 13366
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa042"),
+        "movie_name" : "Crime|Film-Noir",
+        "movie_genre" : "Ranice",
+        "production_year" : 2005,
+        "budget" : 16235
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa043"),
+        "movie_name" : "Action|Crime|Drama|Thriller",
+        "movie_genre" : "Linnie",
+        "production_year" : 1996,
+        "budget" : 12346
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa044"),
+        "movie_name" : "Comedy",
+        "movie_genre" : "Winny",
+        "production_year" : 2002,
+        "budget" : 10344
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa046"),
+        "movie_name" : "Thriller",
+        "movie_genre" : "Irvin",
+        "production_year" : 2006,
+        "budget" : 19219
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa047"),
+        "movie_name" : "Drama|Horror|Mystery|Romance|Thriller",
+        "movie_genre" : "Dorella",
+        "production_year" : 2002,
+        "budget" : 17040
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa048"),
+        "movie_name" : "Comedy",
+        "movie_genre" : "Rosabella",
+        "production_year" : 1991,
+        "budget" : 17001
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa049"),
+        "movie_name" : "Comedy|Romance",
+        "movie_genre" : "Eadith",
+        "production_year" : 2006,
+        "budget" : 11215
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa04a"),
+        "movie_name" : "Crime|Drama|Thriller",
+        "movie_genre" : "Marc",
+        "production_year" : 2020,
+        "budget" : 19368
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa04b"),
+        "movie_name" : "Action|Adventure|Children|Fantasy|Mystery|Thriller",
+        "movie_genre" : "Shaun",
+        "production_year" : 2011,
+        "budget" : 10161
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa04c"),
+        "movie_name" : "Documentary",
+        "movie_genre" : "Constantia",
+        "production_year" : 2012,
+        "budget" : 17068
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa04d"),
+        "movie_name" : "War",
+        "movie_genre" : "Townsend",
+        "production_year" : 2009,
+        "budget" : 10694
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa04e"),
+        "movie_name" : "Comedy|Sci-Fi",
+        "movie_genre" : "Worth",
+        "production_year" : 2014,
+        "budget" : 9564
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa04f"),
+        "movie_name" : "Documentary",
+        "movie_genre" : "Rheta",
+        "production_year" : 2007,
+        "budget" : 16141
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa050"),
+        "movie_name" : "Comedy|Sci-Fi",
+        "movie_genre" : "Otho",
+        "production_year" : 2009,
+        "budget" : 16304
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa051"),
+        "movie_name" : "Documentary|War",
+        "movie_genre" : "Genni",
+        "production_year" : 2019,
+        "budget" : 17360
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa052"),
+        "movie_name" : "Horror|Sci-Fi",
+        "movie_genre" : "Kelcey",
+        "production_year" : 2001,
+        "budget" : 9124
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa053"),
+        "movie_name" : "Drama|Thriller",
+        "movie_genre" : "Blane",
+        "production_year" : 2016,
+        "budget" : 12607
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa054"),
+        "movie_name" : "Horror",
+        "movie_genre" : "Bridgette",
+        "production_year" : 2002,
+        "budget" : 9478
+}
+Type "it" for more
+>
+>
+> db.movie.find({$and:[{"budget":{$gt:"9478"}},{"budget":{$gte:9478}}]}).pretty()
+> db.movie.find({$and:[{"budget":{$gt:"9478"}},{"budget":{$gte:"9478"}}]}).pretty()
+>
+> db.movie.find({$and:[{budget:{$gt:9478}},{budget:{$gte:9478}}]}).pretty()
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa040"),
+        "movie_name" : "Drama|Thriller",
+        "movie_genre" : "Tadeo",
+        "production_year" : 1996,
+        "budget" : 12624
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa041"),
+        "movie_name" : "Horror",
+        "movie_genre" : "Jonah",
+        "production_year" : 1997,
+        "budget" : 13366
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa042"),
+        "movie_name" : "Crime|Film-Noir",
+        "movie_genre" : "Ranice",
+        "production_year" : 2005,
+        "budget" : 16235
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa043"),
+        "movie_name" : "Action|Crime|Drama|Thriller",
+        "movie_genre" : "Linnie",
+        "production_year" : 1996,
+        "budget" : 12346
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa044"),
+        "movie_name" : "Comedy",
+        "movie_genre" : "Winny",
+        "production_year" : 2002,
+        "budget" : 10344
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa045"),
+        "movie_name" : "Drama",
+        "movie_genre" : "Nevile",
+        "production_year" : 2004,
+        "budget" : 19745
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa046"),
+        "movie_name" : "Thriller",
+        "movie_genre" : "Irvin",
+        "production_year" : 2006,
+        "budget" : 19219
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa047"),
+        "movie_name" : "Drama|Horror|Mystery|Romance|Thriller",
+        "movie_genre" : "Dorella",
+        "production_year" : 2002,
+        "budget" : 17040
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa048"),
+        "movie_name" : "Comedy",
+        "movie_genre" : "Rosabella",
+        "production_year" : 1991,
+        "budget" : 17001
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa049"),
+        "movie_name" : "Comedy|Romance",
+        "movie_genre" : "Eadith",
+        "production_year" : 2006,
+        "budget" : 11215
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa04a"),
+        "movie_name" : "Crime|Drama|Thriller",
+        "movie_genre" : "Marc",
+        "production_year" : 2020,
+        "budget" : 19368
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa04b"),
+        "movie_name" : "Action|Adventure|Children|Fantasy|Mystery|Thriller",
+        "movie_genre" : "Shaun",
+        "production_year" : 2011,
+        "budget" : 10161
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa04c"),
+        "movie_name" : "Documentary",
+        "movie_genre" : "Constantia",
+        "production_year" : 2012,
+        "budget" : 17068
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa04d"),
+        "movie_name" : "War",
+        "movie_genre" : "Townsend",
+        "production_year" : 2009,
+        "budget" : 10694
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa04e"),
+        "movie_name" : "Comedy|Sci-Fi",
+        "movie_genre" : "Worth",
+        "production_year" : 2014,
+        "budget" : 9564
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa04f"),
+        "movie_name" : "Documentary",
+        "movie_genre" : "Rheta",
+        "production_year" : 2007,
+        "budget" : 16141
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa050"),
+        "movie_name" : "Comedy|Sci-Fi",
+        "movie_genre" : "Otho",
+        "production_year" : 2009,
+        "budget" : 16304
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa051"),
+        "movie_name" : "Documentary|War",
+        "movie_genre" : "Genni",
+        "production_year" : 2019,
+        "budget" : 17360
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa053"),
+        "movie_name" : "Drama|Thriller",
+        "movie_genre" : "Blane",
+        "production_year" : 2016,
+        "budget" : 12607
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa055"),
+        "movie_name" : "Comedy|Documentary",
+        "movie_genre" : "Albertina",
+        "production_year" : 2006,
+        "budget" : 11774
+}
+Type "it" for more
+>
+>
+> db.movie.find({$and:[{budget:{$lt:9478}},{budget:{$lte:9478}}]}).pretty()
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa052"),
+        "movie_name" : "Horror|Sci-Fi",
+        "movie_genre" : "Kelcey",
+        "production_year" : 2001,
+        "budget" : 9124
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa069"),
+        "movie_name" : "Drama",
+        "movie_genre" : "Sophie",
+        "production_year" : 2011,
+        "budget" : 9045
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa080"),
+        "movie_name" : "Action|Crime|Drama",
+        "movie_genre" : "Joshua",
+        "production_year" : 2008,
+        "budget" : 9477
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa086"),
+        "movie_name" : "Drama",
+        "movie_genre" : "Brinn",
+        "production_year" : 2013,
+        "budget" : 9135
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa09c"),
+        "movie_name" : "Action|Adventure|Comedy|Crime",
+        "movie_genre" : "Brockie",
+        "production_year" : 2003,
+        "budget" : 9024
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa0ce"),
+        "movie_name" : "Comedy|Drama",
+        "movie_genre" : "Alva",
+        "production_year" : 2012,
+        "budget" : 9079
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa0e6"),
+        "movie_name" : "Comedy",
+        "movie_genre" : "Mickie",
+        "production_year" : 2015,
+        "budget" : 9079
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa0fc"),
+        "movie_name" : "Animation|Fantasy",
+        "movie_genre" : "Bianka",
+        "production_year" : 1992,
+        "budget" : 9456
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa109"),
+        "movie_name" : "Adventure|Drama|Horror",
+        "movie_genre" : "Vidovik",
+        "production_year" : 2016,
+        "budget" : 9464
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa10a"),
+        "movie_name" : "Drama",
+        "movie_genre" : "Christopher",
+        "production_year" : 2011,
+        "budget" : 9467
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa10f"),
+        "movie_name" : "Crime|Drama|Film-Noir",
+        "movie_genre" : "Rogers",
+        "production_year" : 2002,
+        "budget" : 9070
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa113"),
+        "movie_name" : "Documentary",
+        "movie_genre" : "Amabel",
+        "production_year" : 2005,
+        "budget" : 9036
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa116"),
+        "movie_name" : "Animation|Comedy|Horror",
+        "movie_genre" : "Shela",
+        "production_year" : 1994,
+        "budget" : 9419
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa11b"),
+        "movie_name" : "Drama",
+        "movie_genre" : "Olivero",
+        "production_year" : 2011,
+        "budget" : 9165
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa133"),
+        "movie_name" : "Horror|Sci-Fi",
+        "movie_genre" : "Sonia",
+        "production_year" : 2005,
+        "budget" : 9034
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa134"),
+        "movie_name" : "Comedy",
+        "movie_genre" : "Tiphany",
+        "production_year" : 2020,
+        "budget" : 9402
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa150"),
+        "movie_name" : "Documentary",
+        "movie_genre" : "Zerk",
+        "production_year" : 1993,
+        "budget" : 9334
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa172"),
+        "movie_name" : "Drama",
+        "movie_genre" : "Myer",
+        "production_year" : 2019,
+        "budget" : 9209
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa173"),
+        "movie_name" : "Drama",
+        "movie_genre" : "Bevvy",
+        "production_year" : 2007,
+        "budget" : 9059
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa177"),
+        "movie_name" : "Comedy",
+        "movie_genre" : "Alicea",
+        "production_year" : 2006,
+        "budget" : 9324
+}
+Type "it" for more
+>
+>
+> db.movie.find({$and:[{production_year:{$gte:2000}},{production_year:{$gt:20000}}]}).pretty()
+>
+> db.movie.find({$and:[{production_year:{$gte:2000}},{production_year:{$gt:10000}}]}).pretty()
+>
+> db.movie.find({$and:[{production_year:{$gt:2000}},{budget:{$gt:10000}}]}).pretty()
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa042"),
+        "movie_name" : "Crime|Film-Noir",
+        "movie_genre" : "Ranice",
+        "production_year" : 2005,
+        "budget" : 16235
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa044"),
+        "movie_name" : "Comedy",
+        "movie_genre" : "Winny",
+        "production_year" : 2002,
+        "budget" : 10344
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa045"),
+        "movie_name" : "Drama",
+        "movie_genre" : "Nevile",
+        "production_year" : 2004,
+        "budget" : 19745
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa046"),
+        "movie_name" : "Thriller",
+        "movie_genre" : "Irvin",
+        "production_year" : 2006,
+        "budget" : 19219
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa047"),
+        "movie_name" : "Drama|Horror|Mystery|Romance|Thriller",
+        "movie_genre" : "Dorella",
+        "production_year" : 2002,
+        "budget" : 17040
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa049"),
+        "movie_name" : "Comedy|Romance",
+        "movie_genre" : "Eadith",
+        "production_year" : 2006,
+        "budget" : 11215
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa04a"),
+        "movie_name" : "Crime|Drama|Thriller",
+        "movie_genre" : "Marc",
+        "production_year" : 2020,
+        "budget" : 19368
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa04b"),
+        "movie_name" : "Action|Adventure|Children|Fantasy|Mystery|Thriller",
+        "movie_genre" : "Shaun",
+        "production_year" : 2011,
+        "budget" : 10161
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa04c"),
+        "movie_name" : "Documentary",
+        "movie_genre" : "Constantia",
+        "production_year" : 2012,
+        "budget" : 17068
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa04d"),
+        "movie_name" : "War",
+        "movie_genre" : "Townsend",
+        "production_year" : 2009,
+        "budget" : 10694
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa04f"),
+        "movie_name" : "Documentary",
+        "movie_genre" : "Rheta",
+        "production_year" : 2007,
+        "budget" : 16141
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa050"),
+        "movie_name" : "Comedy|Sci-Fi",
+        "movie_genre" : "Otho",
+        "production_year" : 2009,
+        "budget" : 16304
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa051"),
+        "movie_name" : "Documentary|War",
+        "movie_genre" : "Genni",
+        "production_year" : 2019,
+        "budget" : 17360
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa053"),
+        "movie_name" : "Drama|Thriller",
+        "movie_genre" : "Blane",
+        "production_year" : 2016,
+        "budget" : 12607
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa055"),
+        "movie_name" : "Comedy|Documentary",
+        "movie_genre" : "Albertina",
+        "production_year" : 2006,
+        "budget" : 11774
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa056"),
+        "movie_name" : "Crime|Drama",
+        "movie_genre" : "Reynolds",
+        "production_year" : 2014,
+        "budget" : 11300
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa059"),
+        "movie_name" : "Romance",
+        "movie_genre" : "Tandy",
+        "production_year" : 2018,
+        "budget" : 13103
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa05d"),
+        "movie_name" : "Drama|Horror|Thriller",
+        "movie_genre" : "Nicholas",
+        "production_year" : 2015,
+        "budget" : 12138
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa05e"),
+        "movie_name" : "Comedy|Crime|Drama|Mystery",
+        "movie_genre" : "Aleen",
+        "production_year" : 2003,
+        "budget" : 13543
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa060"),
+        "movie_name" : "Horror|Thriller",
+        "movie_genre" : "Theda",
+        "production_year" : 2014,
+        "budget" : 17254
+}
+Type "it" for more
+>
+> db.movie.find({$or:[{production_year:{$gt:2000}},{budget:{$gt:10000}}]}).pretty()
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa040"),
+        "movie_name" : "Drama|Thriller",
+        "movie_genre" : "Tadeo",
+        "production_year" : 1996,
+        "budget" : 12624
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa041"),
+        "movie_name" : "Horror",
+        "movie_genre" : "Jonah",
+        "production_year" : 1997,
+        "budget" : 13366
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa042"),
+        "movie_name" : "Crime|Film-Noir",
+        "movie_genre" : "Ranice",
+        "production_year" : 2005,
+        "budget" : 16235
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa043"),
+        "movie_name" : "Action|Crime|Drama|Thriller",
+        "movie_genre" : "Linnie",
+        "production_year" : 1996,
+        "budget" : 12346
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa044"),
+        "movie_name" : "Comedy",
+        "movie_genre" : "Winny",
+        "production_year" : 2002,
+        "budget" : 10344
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa045"),
+        "movie_name" : "Drama",
+        "movie_genre" : "Nevile",
+        "production_year" : 2004,
+        "budget" : 19745
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa046"),
+        "movie_name" : "Thriller",
+        "movie_genre" : "Irvin",
+        "production_year" : 2006,
+        "budget" : 19219
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa047"),
+        "movie_name" : "Drama|Horror|Mystery|Romance|Thriller",
+        "movie_genre" : "Dorella",
+        "production_year" : 2002,
+        "budget" : 17040
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa048"),
+        "movie_name" : "Comedy",
+        "movie_genre" : "Rosabella",
+        "production_year" : 1991,
+        "budget" : 17001
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa049"),
+        "movie_name" : "Comedy|Romance",
+        "movie_genre" : "Eadith",
+        "production_year" : 2006,
+        "budget" : 11215
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa04a"),
+        "movie_name" : "Crime|Drama|Thriller",
+        "movie_genre" : "Marc",
+        "production_year" : 2020,
+        "budget" : 19368
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa04b"),
+        "movie_name" : "Action|Adventure|Children|Fantasy|Mystery|Thriller",
+        "movie_genre" : "Shaun",
+        "production_year" : 2011,
+        "budget" : 10161
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa04c"),
+        "movie_name" : "Documentary",
+        "movie_genre" : "Constantia",
+        "production_year" : 2012,
+        "budget" : 17068
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa04d"),
+        "movie_name" : "War",
+        "movie_genre" : "Townsend",
+        "production_year" : 2009,
+        "budget" : 10694
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa04e"),
+        "movie_name" : "Comedy|Sci-Fi",
+        "movie_genre" : "Worth",
+        "production_year" : 2014,
+        "budget" : 9564
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa04f"),
+        "movie_name" : "Documentary",
+        "movie_genre" : "Rheta",
+        "production_year" : 2007,
+        "budget" : 16141
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa050"),
+        "movie_name" : "Comedy|Sci-Fi",
+        "movie_genre" : "Otho",
+        "production_year" : 2009,
+        "budget" : 16304
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa051"),
+        "movie_name" : "Documentary|War",
+        "movie_genre" : "Genni",
+        "production_year" : 2019,
+        "budget" : 17360
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa052"),
+        "movie_name" : "Horror|Sci-Fi",
+        "movie_genre" : "Kelcey",
+        "production_year" : 2001,
+        "budget" : 9124
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa053"),
+        "movie_name" : "Drama|Thriller",
+        "movie_genre" : "Blane",
+        "production_year" : 2016,
+        "budget" : 12607
+}
+Type "it" for more
+>
+>
+> db.movie.find({$nor:[{production_year:{$gt:2000}},{budget:{$gt:10000}}]}).pretty()
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa0c0"),
+        "movie_name" : "Comedy|Drama",
+        "movie_genre" : "Sibyl",
+        "production_year" : 1992,
+        "budget" : 9580
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa0fc"),
+        "movie_name" : "Animation|Fantasy",
+        "movie_genre" : "Bianka",
+        "production_year" : 1992,
+        "budget" : 9456
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa0fe"),
+        "movie_name" : "Comedy|Romance",
+        "movie_genre" : "Hayes",
+        "production_year" : 1995,
+        "budget" : 9933
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa104"),
+        "movie_name" : "Drama|Musical",
+        "movie_genre" : "Benjamin",
+        "production_year" : 1991,
+        "budget" : 9836
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa116"),
+        "movie_name" : "Animation|Comedy|Horror",
+        "movie_genre" : "Shela",
+        "production_year" : 1994,
+        "budget" : 9419
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa117"),
+        "movie_name" : "Documentary",
+        "movie_genre" : "Hermia",
+        "production_year" : 1995,
+        "budget" : 9819
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa136"),
+        "movie_name" : "Drama|Romance",
+        "movie_genre" : "Damara",
+        "production_year" : 1994,
+        "budget" : 9643
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa150"),
+        "movie_name" : "Documentary",
+        "movie_genre" : "Zerk",
+        "production_year" : 1993,
+        "budget" : 9334
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa1ed"),
+        "movie_name" : "Drama|Romance",
+        "movie_genre" : "Jarad",
+        "production_year" : 1990,
+        "budget" : 9976
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa1fa"),
+        "movie_name" : "Comedy|Romance",
+        "movie_genre" : "Karylin",
+        "production_year" : 1991,
+        "budget" : 9613
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa1ff"),
+        "movie_name" : "Comedy",
+        "movie_genre" : "Janene",
+        "production_year" : 1991,
+        "budget" : 9681
+}
+>
+>
+> db.movie.find({$not:[{production_year:{$gt:2000}},{budget:{$gt:10000}}]}).pretty()
+Error: error: {
+        "ok" : 0,
+        "errmsg" : "unknown top level operator: $not. If you have a field name that starts with a '$' symbol, consider using $getField or $setField.",
+        "code" : 2,
+        "codeName" : "BadValue"
+}
+> db.movie.find({$and:[{production_year:{$gt:2000}},{budget:{$lte:10000}}]}).pretty()
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa04e"),
+        "movie_name" : "Comedy|Sci-Fi",
+        "movie_genre" : "Worth",
+        "production_year" : 2014,
+        "budget" : 9564
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa052"),
+        "movie_name" : "Horror|Sci-Fi",
+        "movie_genre" : "Kelcey",
+        "production_year" : 2001,
+        "budget" : 9124
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa054"),
+        "movie_name" : "Horror",
+        "movie_genre" : "Bridgette",
+        "production_year" : 2002,
+        "budget" : 9478
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa069"),
+        "movie_name" : "Drama",
+        "movie_genre" : "Sophie",
+        "production_year" : 2011,
+        "budget" : 9045
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa073"),
+        "movie_name" : "Drama|Romance",
+        "movie_genre" : "Jon",
+        "production_year" : 2019,
+        "budget" : 9711
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa080"),
+        "movie_name" : "Action|Crime|Drama",
+        "movie_genre" : "Joshua",
+        "production_year" : 2008,
+        "budget" : 9477
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa086"),
+        "movie_name" : "Drama",
+        "movie_genre" : "Brinn",
+        "production_year" : 2013,
+        "budget" : 9135
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa09c"),
+        "movie_name" : "Action|Adventure|Comedy|Crime",
+        "movie_genre" : "Brockie",
+        "production_year" : 2003,
+        "budget" : 9024
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa0ca"),
+        "movie_name" : "Drama",
+        "movie_genre" : "Luella",
+        "production_year" : 2007,
+        "budget" : 9572
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa0ce"),
+        "movie_name" : "Comedy|Drama",
+        "movie_genre" : "Alva",
+        "production_year" : 2012,
+        "budget" : 9079
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa0e0"),
+        "movie_name" : "Drama",
+        "movie_genre" : "Bart",
+        "production_year" : 2009,
+        "budget" : 9694
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa0e6"),
+        "movie_name" : "Comedy",
+        "movie_genre" : "Mickie",
+        "production_year" : 2015,
+        "budget" : 9079
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa109"),
+        "movie_name" : "Adventure|Drama|Horror",
+        "movie_genre" : "Vidovik",
+        "production_year" : 2016,
+        "budget" : 9464
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa10a"),
+        "movie_name" : "Drama",
+        "movie_genre" : "Christopher",
+        "production_year" : 2011,
+        "budget" : 9467
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa10f"),
+        "movie_name" : "Crime|Drama|Film-Noir",
+        "movie_genre" : "Rogers",
+        "production_year" : 2002,
+        "budget" : 9070
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa113"),
+        "movie_name" : "Documentary",
+        "movie_genre" : "Amabel",
+        "production_year" : 2005,
+        "budget" : 9036
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa11b"),
+        "movie_name" : "Drama",
+        "movie_genre" : "Olivero",
+        "production_year" : 2011,
+        "budget" : 9165
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa124"),
+        "movie_name" : "Comedy|Drama",
+        "movie_genre" : "Vivie",
+        "production_year" : 2005,
+        "budget" : 9905
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa133"),
+        "movie_name" : "Horror|Sci-Fi",
+        "movie_genre" : "Sonia",
+        "production_year" : 2005,
+        "budget" : 9034
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa134"),
+        "movie_name" : "Comedy",
+        "movie_genre" : "Tiphany",
+        "production_year" : 2020,
+        "budget" : 9402
+}
+Type "it" for more
+>
+>
+>
+> db.movie.find({}).sort({production_year:-1}).pretty()
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa04a"),
+        "movie_name" : "Crime|Drama|Thriller",
+        "movie_genre" : "Marc",
+        "production_year" : 2020,
+        "budget" : 19368
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa08d"),
+        "movie_name" : "Drama|Romance|Thriller",
+        "movie_genre" : "Davidson",
+        "production_year" : 2020,
+        "budget" : 11371
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa08f"),
+        "movie_name" : "Action|Thriller",
+        "movie_genre" : "Alexia",
+        "production_year" : 2020,
+        "budget" : 17897
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa099"),
+        "movie_name" : "Horror",
+        "movie_genre" : "Leontyne",
+        "production_year" : 2020,
+        "budget" : 16379
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa0b0"),
+        "movie_name" : "Crime|Thriller",
+        "movie_genre" : "Murray",
+        "production_year" : 2020,
+        "budget" : 11422
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa0b2"),
+        "movie_name" : "Animation",
+        "movie_genre" : "Amerigo",
+        "production_year" : 2020,
+        "budget" : 13760
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa0c2"),
+        "movie_name" : "Drama",
+        "movie_genre" : "Christal",
+        "production_year" : 2020,
+        "budget" : 18412
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa0d5"),
+        "movie_name" : "Drama",
+        "movie_genre" : "Logan",
+        "production_year" : 2020,
+        "budget" : 11892
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa0e5"),
+        "movie_name" : "Documentary|IMAX",
+        "movie_genre" : "Dolley",
+        "production_year" : 2020,
+        "budget" : 10069
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa0ea"),
+        "movie_name" : "Action|Drama|War",
+        "movie_genre" : "Cordi",
+        "production_year" : 2020,
+        "budget" : 13308
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa0f0"),
+        "movie_name" : "Drama",
+        "movie_genre" : "Vivianne",
+        "production_year" : 2020,
+        "budget" : 19021
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa107"),
+        "movie_name" : "Drama",
+        "movie_genre" : "Adolf",
+        "production_year" : 2020,
+        "budget" : 13027
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa114"),
+        "movie_name" : "Documentary",
+        "movie_genre" : "Dalila",
+        "production_year" : 2020,
+        "budget" : 11207
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa118"),
+        "movie_name" : "Documentary",
+        "movie_genre" : "Madalyn",
+        "production_year" : 2020,
+        "budget" : 12008
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa134"),
+        "movie_name" : "Comedy",
+        "movie_genre" : "Tiphany",
+        "production_year" : 2020,
+        "budget" : 9402
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa141"),
+        "movie_name" : "Drama",
+        "movie_genre" : "Emeline",
+        "production_year" : 2020,
+        "budget" : 12725
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa180"),
+        "movie_name" : "Drama|Fantasy|Horror",
+        "movie_genre" : "Julius",
+        "production_year" : 2020,
+        "budget" : 14304
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa192"),
+        "movie_name" : "Drama|Romance",
+        "movie_genre" : "Darius",
+        "production_year" : 2020,
+        "budget" : 12938
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa1ad"),
+        "movie_name" : "Comedy|Crime|Mystery",
+        "movie_genre" : "Dickie",
+        "production_year" : 2020,
+        "budget" : 15753
+}
+{
+        "_id" : ObjectId("622a37c2a70605a0265fa1c3"),
+        "movie_name" : "Action|Thriller",
+        "movie_genre" : "Blake",
+        "production_year" : 2020,
+        "budget" : 19356
+}
+Type "it" for more
+>
+>
+>
+> db,movie.find({}).limit(10).pretty()
+uncaught exception: ReferenceError: movie is not defined :
+@(shell):1:4
+>
+>
+> db.movie.find({},{movie_name:1,_id:0}).skip(10).limit(5).pretty()
+{ "movie_name" : "Crime|Drama|Thriller" }
+{ "movie_name" : "Action|Adventure|Children|Fantasy|Mystery|Thriller" }
+{ "movie_name" : "Documentary" }
+{ "movie_name" : "War" }
+{ "movie_name" : "Comedy|Sci-Fi" }
+>
+>
+>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
